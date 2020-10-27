@@ -61,7 +61,7 @@ const questions = [
 // function to initialize program
 async function main() {
   let data = await inquirer.prompt(questions);
-  console.log(data);
+  //console.log(data);
   let readmeFilename = data.title.split(' ').join('-').concat("-README.md");
   fs.writeFileSync(readmeFilename, generateMarkdown(data));
   console.log(`${readmeFilename} generated!`);
